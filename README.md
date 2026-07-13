@@ -14,8 +14,6 @@
 npx skills add https://github.com/LeoGoat2004/tech-tutor
 ```
 
-> Works with: Claude Code · Codex · OpenCode · TRAE · any tool supporting `SKILL.md`
-
 Once installed, just say: *"I want to learn about [topic]"* or *"Help me understand this project"*.
 
 ---

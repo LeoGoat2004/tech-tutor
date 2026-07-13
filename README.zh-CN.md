@@ -14,8 +14,6 @@
 npx skills add https://github.com/LeoGoat2004/tech-tutor
 ```
 
-> 兼容环境：Claude Code · Codex · OpenCode · TRAE · 所有支持 `SKILL.md` 格式的工具
-
 安装后，直接说：*"我想学习 [某个技术]"* 或 *"帮我理解这个项目"*。
 
 ---
