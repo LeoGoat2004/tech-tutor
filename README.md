@@ -39,6 +39,17 @@ A Socratic-style learning companion. It doesn't lecture — it asks questions, c
 | **Topic Exploration** | Learn a concept from scratch | *"Teach me how Transformers work"* |
 | **Project Deconstruction** | Understand a codebase deeply | *"Walk me through this project"* |
 
+**Project deconstruction uses a six-layer framework** — systematic, from overview to hands-on:
+
+```
+1. Bird's Eye View    →  Tech stack, structure, purpose
+2. Entry Point        →  Where execution begins, startup flow
+3. Core Modules       →  Key components, responsibilities, dependencies
+4. Core Flow          →  Trace one full path, inputs & outputs at each stage
+5. Design Decisions   →  Why it's built this way, trade-offs
+6. Extend & Modify    →  Learn by changing things, add a small feature
+```
+
 **Pre-configured domains:** Frontend · Backend · AI Infrastructure · Agent Harness · Multi-Agent · Reinforcement Learning · ROS
 
 > No domain listed? Tech Tutor can teach any CS/AI topic by searching authoritative sources on the fly.
