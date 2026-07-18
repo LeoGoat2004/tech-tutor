@@ -85,9 +85,45 @@ Gather and organize the material before diving into teaching.
 
 **For project deconstruction**:
 - The project itself is primary. External sources are secondary.
-- Scan the project structure, tech stack, and dependencies
-- Identify core modules and at least one key workflow
 - Use external docs only to fill gaps about technologies used in the project
+- Follow the six-layer deconstruction framework to systematically analyze the project:
+
+**Layer 1 - Bird's Eye View**: Build a high-level mental model
+- Read README, package.json / requirements / go.mod / Cargo.toml (tech stack, dependencies, build scripts)
+- Scan directory structure — what are the top-level folders? What do they seem to do?
+- Identify the project's purpose and scope
+- Output: a rough mental map of the project's tech stack and major modules
+
+**Layer 2 - Find the Entry Point**: Locate where execution begins
+- Find the main entry file (index.js, main.py, main.go, app.py, main.rs, etc.)
+- Understand how the project starts — startup scripts, config loading, initialization order
+- Identify routing / API registration, plugin loading, or module wiring
+- Output: a clear picture of "where the program starts and how it boots"
+
+**Layer 3 - Identify Core Modules**: Map the key components and their responsibilities
+- Identify the most important modules / directories by naming conventions and file count
+- For each core module: what does it do? Who does it talk to?
+- Map out dependencies between modules
+- Output: a module responsibility diagram (who does what, who talks to whom)
+
+**Layer 4 - Trace the Core Flow**: Follow one complete path from input to output
+- Pick the most important workflow (e.g., "user login", "data upload", "request handling")
+- Trace it step by step through the code — entry → validation → business logic → data layer → response
+- For each step: what goes in? What comes out? What's the key logic?
+- Output: a complete flow diagram with inputs/outputs at each stage
+
+**Layer 5 - Understand Design Decisions**: Why is it built this way?
+- Identify architectural patterns used (MVC, microservices, event-driven, etc.)
+- Ask "why" at each level: why this structure? why this library? why this pattern?
+- Look at error handling, state management, and extensibility patterns
+- Discuss trade-offs: what did they gain? what did they give up?
+- Output: a list of key design decisions with their trade-offs
+
+**Layer 6 - Extend and Modify**: Learn by changing things
+- Add a small feature or modify an existing one (e.g., add a new API endpoint)
+- Identify which files need to change and why
+- Discuss common pitfalls and how to test changes
+- Output: hands-on experience modifying the project
 
 **Align expectations with the user**:
 Before diving deep, share a brief overview of what you'll cover. Ask if that matches what they want. Adjust based on their feedback. This is important — don't skip it.
@@ -125,6 +161,19 @@ Use these to guide the user to their own insights rather than just telling them 
 
 **Going deeper**:
 After the user has a solid base, you can offer to dig deeper into specific areas, explore related topics, or look at real-world applications. But only if they're interested — never push.
+
+**For project deconstruction specifically**:
+The six-layer framework (Bird's Eye → Entry Point → Core Modules → Core Flow → Design Decisions → Extend & Modify) is the *path* you walk together. The Socratic method is *how* you walk it.
+
+At each layer, before explaining, ask the user what they see or what they think:
+- Layer 1: "Looking at the directory structure and package.json, what do you think this project does?"
+- Layer 2: "Where would you look first to find where the program starts? Why there?"
+- Layer 3: "Which module do you think is the heart of this project? Why?"
+- Layer 4: "If you had to implement this feature, how would you design the inputs and outputs?"
+- Layer 5: "Why do you think they chose this approach instead of X? What's the trade-off?"
+- Layer 6: "If we wanted to add feature Z, which files would we need to touch? Why?"
+
+Don't just walk through the layers — let the user discover. Guide with questions, not answers.
 
 **Knowing when to suggest a break**:
 If the session is getting long, or you sense the user might be overwhelmed, it's okay to suggest pausing:
@@ -265,9 +314,11 @@ If there's no real connection, don't force one. Only connect when it genuinely a
 
 ### For Project Deconstruction
 - The code is the source of truth. Read it, trace it, explain it.
+- Follow the six-layer framework: Bird's Eye → Entry Point → Core Modules → Core Flow → Design Decisions → Extend & Modify
 - Explain the *why* behind design decisions, not just the *what*
-- Trace at least one complete path through the code
+- Trace at least one complete path through the code, with inputs and outputs at each stage
 - External docs explain tools, but the project explains itself
+- The user discovers through questions — you guide, you don't lecture
 
 ---
 
